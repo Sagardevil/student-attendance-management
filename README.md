@@ -7,9 +7,22 @@
 
 A comprehensive web-based Student Attendance Management System designed to streamline attendance tracking in educational institutions. This system provides an efficient solution for managing student attendance records with role-based access for administrators, teachers, and students.
 
+## 📸 Project Outputs
+
+| Main Page                           | Dashboard                           |
+| ----------------------------------- | ----------------------------------- |
+| ![Main Page](outputs/main_page.png) | ![Dashboard](outputs/dashboard.png) |
+
+| Mark Attendance                                 | View Attendance                                 |
+| ----------------------------------------------- | ----------------------------------------------- |
+| ![Mark Attendance](outputs/mark_attendance.png) | ![View Attendance](outputs/view_attendance.png) |
+
+---
+
 ## 🌟 Features
 
 ### 👨‍💼 Admin Panel
+
 - **User Management**: Create, update, and manage teacher and student accounts
 - **Class Management**: Organize classes, sections, and subjects
 - **Attendance Reports**: Generate comprehensive attendance reports
@@ -17,6 +30,7 @@ A comprehensive web-based Student Attendance Management System designed to strea
 - **System Configuration**: Manage system settings and configurations
 
 ### 👩‍🏫 Teacher Panel
+
 - **Mark Attendance**: Easy attendance marking interface for classes
 - **Class Management**: View assigned classes and student lists
 - **Attendance Reports**: Generate reports for specific classes and time periods
@@ -24,6 +38,7 @@ A comprehensive web-based Student Attendance Management System designed to strea
 - **Quick Actions**: Bulk attendance operations and corrections
 
 ### 👨‍🎓 Student Panel
+
 - **View Attendance**: Check personal attendance records
 - **Attendance Summary**: Monthly and semester-wise attendance overview
 - **Class Schedule**: View class timetables and subjects
@@ -50,23 +65,28 @@ Before running this application, ensure you have the following installed:
 ## 🚀 Installation
 
 ### Step 1: Clone the Repository
+
 ```bash
 git clone https://github.com/Sagardevil/student-attendance-management.git
 cd student-attendance-management
 ```
 
 ### Step 2: Database Setup
+
 1. Create a new MySQL database:
+
 ```sql
 CREATE DATABASE attendance_system;
 ```
 
 2. Import the database schema:
+
 ```bash
 mysql -u username -p attendance_system < database/attendance_system.sql
 ```
 
 3. Update database configuration in `config/database.php`:
+
 ```php
 <?php
 $servername = "localhost";
@@ -77,10 +97,12 @@ $dbname = "attendance_system";
 ```
 
 ### Step 3: Configure Web Server
+
 1. Place the project files in your web server directory (e.g., `htdocs` for XAMPP)
 2. Ensure the web server has read/write permissions for the application directory
 
 ### Step 4: Initial Setup
+
 1. Access the application in your browser: `http://localhost/student-attendance-management`
 2. Use default admin credentials:
    - **Username**: admin
@@ -126,7 +148,9 @@ student-attendance-management/
 ## 🔧 Configuration
 
 ### Environment Configuration
+
 Create a `.env` file in the root directory:
+
 ```env
 DB_HOST=localhost
 DB_USERNAME=your_username
@@ -137,7 +161,9 @@ DEBUG_MODE=false
 ```
 
 ### Email Configuration (Optional)
+
 Configure email settings in `config/email.php` for notifications:
+
 ```php
 $email_config = [
     'smtp_host' => 'smtp.gmail.com',
@@ -149,28 +175,31 @@ $email_config = [
 
 ## 👥 User Roles & Permissions
 
-| Role | Permissions |
-|------|-------------|
-| **Super Admin** | Full system access, user management, system configuration |
-| **Admin** | User management, reports generation, class management |
-| **Teacher** | Mark attendance, view class reports, manage assigned classes |
-| **Student** | View personal attendance, class schedules, notifications |
+| Role            | Permissions                                                  |
+| --------------- | ------------------------------------------------------------ |
+| **Super Admin** | Full system access, user management, system configuration    |
+| **Admin**       | User management, reports generation, class management        |
+| **Teacher**     | Mark attendance, view class reports, manage assigned classes |
+| **Student**     | View personal attendance, class schedules, notifications     |
 
 ## 📊 Features Overview
 
 ### Attendance Marking
+
 - Quick and intuitive interface for marking attendance
 - Bulk operations for multiple students
 - Late arrival and early departure tracking
 - Attendance corrections and modifications
 
 ### Reporting System
+
 - Daily, weekly, monthly, and custom date range reports
 - Export reports in PDF and Excel formats
 - Graphical representation of attendance data
 - Defaulter lists and low attendance alerts
 
 ### Dashboard Analytics
+
 - Real-time attendance statistics
 - Class-wise attendance summaries
 - Student performance metrics
@@ -187,17 +216,20 @@ $email_config = [
 ## 🎨 Customization
 
 ### Theme Customization
+
 Modify `assets/css/custom.css` to change the appearance:
+
 ```css
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
 }
 ```
 
 ### Adding New Features
+
 1. Create new PHP files in the appropriate directory
 2. Update navigation menus in `includes/header.php`
 3. Add database tables if required
@@ -206,6 +238,7 @@ Modify `assets/css/custom.css` to change the appearance:
 ## 📱 Mobile Responsiveness
 
 The system is fully responsive and works seamlessly on:
+
 - Desktop computers
 - Tablets
 - Mobile phones
@@ -222,6 +255,7 @@ We welcome contributions! Please follow these steps:
 5. Open a Pull Request
 
 ### Development Guidelines
+
 - Follow PSR-4 coding standards
 - Write meaningful commit messages
 - Add comments for complex logic
@@ -250,6 +284,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Sagar Devil**
+
 - GitHub: [@Sagardevil](https://github.com/Sagardevil)
 - Email: [your.email@example.com](mailto:your.email@example.com)
 
@@ -263,6 +298,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 If you encounter any issues or have questions:
+
 1. Check the [Issues](https://github.com/Sagardevil/student-attendance-management/issues) page
 2. Create a new issue if your problem isn't already reported
 3. Provide detailed information about your environment and the issue
@@ -270,6 +306,7 @@ If you encounter any issues or have questions:
 ## 🔄 Updates & Changelog
 
 ### Version 1.0.0
+
 - Initial release with core functionality
 - Admin, Teacher, and Student panels
 - Basic reporting system
